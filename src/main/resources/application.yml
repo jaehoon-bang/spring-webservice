@@ -4,7 +4,6 @@ spring:
       enabled: true
 
 #local 환경
----
 spring :
   profiles: local
   datasource:
