@@ -18,6 +18,7 @@ public class SpringWebserviceApplication {
         new SpringApplicationBuilder(SpringWebserviceApplication.class)
                 .properties(APPPLICATION_LOCATIONS)
                 .run(args);
+        
     }
 
 }
