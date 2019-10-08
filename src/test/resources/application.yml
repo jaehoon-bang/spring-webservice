@@ -7,5 +7,11 @@ spring:
 ---
 spring:
   profiles: local
+  datasource:
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    h2:
+      console:
+        enabled: true
