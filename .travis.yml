@@ -24,7 +24,7 @@ deploy:
     acl: public_read
     wait-unit-deployed: true
     on:
-      repo: jaehoon-bang / spring-webservice
+      repo: jaehoon-bang/spring-webservice
       branch: master
 
 # CI 실행 완료시 메일로 알람
