@@ -34,7 +34,7 @@ deploy:
       repo: jaehoon-bang/spring-webservice
       branch: master
   #Codedeploy Config
-    -provider: codedeploy
+  - provider: codedeploy
      access_key_id: $AWS_ACCESS_KEY
      secret_access_key: $AWS_SCRET_KEY
      bucket: spring-webservice-deploy
