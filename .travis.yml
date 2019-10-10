@@ -20,6 +20,7 @@ before_deploy:
   - mkdir -p deploy
   - mv springboot-webservice.zip deploy/springboot-webservice.zip
 deploy:
+  #S3 Config
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY      # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY  # Travis repo settings에 설정된 값
@@ -32,7 +33,21 @@ deploy:
     on:
       repo: jaehoon-bang/spring-webservice
       branch: master
-      
+  #Codedeploy Config
+    -provider: codedeploy
+     access_key_id: $AWS_ACCESS_KEY
+     secret_access_key: $AWS_SCRET_KEY
+     bucket: spring-webservice-deploy
+     key: springboot-webservice.zip
+     bundle_type: zip
+     application: springboot-webservice # 웹 콘솔에서 등록한 codeDeploy 어플리케이션
+     deployment_group: springboot-webservice-group
+     region: ap-northeast-2
+     wait-until-deployed: true
+     on:
+       repo: jaehoon-bang/spring-webservice
+       branch: master
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
