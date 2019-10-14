@@ -39,7 +39,7 @@ deploy:
     bucket: spring-webservice-deploy
     key: springboot-webservice.zip
     bundle_type: zip
-    application: spring-webservice # 웹 콘솔에서 등록한 codeDeploy 어플리케이션
+    application: spring-webservice
     deployment_group: springboot-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
