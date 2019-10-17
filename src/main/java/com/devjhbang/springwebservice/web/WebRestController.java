@@ -20,7 +20,7 @@ public class WebRestController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "HelloWorld2222";
+        return "HelloWorld3333";
     }
 
     @PostMapping("/posts")
