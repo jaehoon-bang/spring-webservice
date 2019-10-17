@@ -32,7 +32,19 @@ deploy:
     on:
       repo: jaehoon-bang/spring-webservice
       branch: master
-
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: spring-webservice-deploy
+    key: springboot-webservice.zip
+    bundle_type: zip
+    application: spring-webservice
+    deployment_group: springboot-webservice-group
+    region: ap-northeast-1
+    wait-until-deployed: true
+    on:
+      repo: jaehoon-bang/spring-webservice
+      branch: master
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
