@@ -20,5 +20,4 @@ public class SpringWebserviceApplication {
                 .run(args);
 
     }
-
 }
